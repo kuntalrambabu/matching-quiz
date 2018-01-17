@@ -3,8 +3,8 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-import { MatchGalleryComponent } from './match-gallery/match-gallery.component';
-import { MatchTileComponent } from './match-tile/match-tile.component';
+import { MatchGalleryComponent } from './components/match-gallery/match-gallery.component';
+import { MatchTileComponent } from './components/match-tile/match-tile.component';
 
 
 @NgModule({

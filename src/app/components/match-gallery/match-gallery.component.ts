@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatchModel } from '../../models/match-model';
 
 @Component({
   selector: 'app-match-gallery',

@@ -7,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MatchTileComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+    this.imageUrl = '../assets/animals/dog.jpg';
+  }
+
+  private imageUrl: string;
 
   ngOnInit() {
   }
