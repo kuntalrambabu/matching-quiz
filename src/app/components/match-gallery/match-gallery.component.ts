@@ -8,7 +8,15 @@ import { MatchModel } from '../../models/match-model';
 })
 export class MatchGalleryComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+    this.models = new Array<MatchModel>();
+    this.models.push(new MatchModel( '../assets/animals/dog.jpg', 'dog' ));
+    this.models.push(new MatchModel( '../assets/animals/cat.jpg', 'dog' ));
+    this.models.push(new MatchModel( '../assets/animals/bird.jpg', 'dog' ));
+    this.models.push(new MatchModel( '../assets/animals/pig.jpg', 'dog' ));
+  }
+
+  public models: Array<MatchModel>;
 
   ngOnInit() {
   }

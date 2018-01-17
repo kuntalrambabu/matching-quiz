@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { MatchModel } from '../../models/match-model';
 
 @Component({
   selector: 'app-match-tile',
@@ -7,11 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MatchTileComponent implements OnInit {
 
-  constructor() {
-    this.imageUrl = '../assets/animals/dog.jpg';
-  }
+  constructor() {}
 
-  private imageUrl: string;
+  @Input()
+  model: MatchModel;
 
   ngOnInit() {
   }

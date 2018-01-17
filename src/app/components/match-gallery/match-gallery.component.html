@@ -1,5 +1,3 @@
-<ul>
-  <app-match-tile></app-match-tile>
-  <app-match-tile></app-match-tile>
-  <app-match-tile></app-match-tile>
+<ul *ngFor="let model of models">
+  <app-match-tile [model]="model" ></app-match-tile>
 </ul>
