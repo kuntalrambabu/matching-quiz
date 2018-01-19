@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { MatchGalleryComponent } from './components/match-gallery/match-gallery.component';
 import { MatchTileComponent } from './components/match-tile/match-tile.component';
 import { MatchService } from './services/match-service/match-service.service';
+import { MatchPanelComponent } from './match-panel/match-panel.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MatchGalleryComponent,
-    MatchTileComponent
+    MatchTileComponent,
+    MatchPanelComponent
   ],
   imports: [
     BrowserModule,
