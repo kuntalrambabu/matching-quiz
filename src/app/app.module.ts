@@ -5,7 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { MatchGalleryComponent } from './components/match-gallery/match-gallery.component';
 import { MatchTileComponent } from './components/match-tile/match-tile.component';
-
+import { MatchService } from './services/match-service/match-service.service';
 
 @NgModule({
   declarations: [
@@ -17,7 +17,7 @@ import { MatchTileComponent } from './components/match-tile/match-tile.component
     BrowserModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [ MatchService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
