@@ -1,0 +1,12 @@
+div {
+  background:gainsboro;
+  white-space: nowrap;
+  width:100%;
+  overflow-x: scroll;
+}
+ul {
+  display:inline-block;
+}
+li {
+  list-style-type: none;
+}
