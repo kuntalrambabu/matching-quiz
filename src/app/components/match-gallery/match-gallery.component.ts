@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+// import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 
+import { MatchService } from '../../services/match-service/match-service.service';
 import { MatchModel } from '../../models/match-model';
 
 @Component({
@@ -11,16 +12,16 @@ import { MatchModel } from '../../models/match-model';
 })
 export class MatchGalleryComponent implements OnInit {
 
-  constructor(private http: HttpClient) {
+  public models$: Observable<Array<MatchModel>>;
 
-    this.http.get('../../../assets/animals/animals.json').toPromise().then(( response: any) => {
-    this.models = new Array<MatchModel>();
-    this.models.push( ...response );
-    });
+  constructor( private matchService: MatchService ) {
 
+    // this.http.get('../../../assets/animals/animals.json').toPromise().then(( response: any) => {
+    //   this.models = new Array<MatchModel>();
+    //   this.models.push( ...response );
+    // });
+    this.models$ = this.matchService.getModels();
   }
-
-  public models: Array<MatchModel>;
 
   ngOnInit() {
   }
