@@ -1,7 +1,9 @@
-<div>
-  <ul *ngFor="let model of models$ | async">
-    <li>
-      <app-match-tile [model]="model"></app-match-tile>
-    </li>
-  </ul>
+<div class="gallery-div-wrapper">
+  <div class="gallery-div">
+    <ul *ngFor="let model of models$ | async">
+      <li>
+        <app-match-tile [model]="model"></app-match-tile>
+      </li>
+    </ul>
+  </div>
 </div>
