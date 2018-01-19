@@ -1,9 +1,4 @@
-export class MatchModel {
+export interface MatchModel {
   imageUrl: string;
   label: string;
-
-  constructor( imageUrl: string, label: string) {
-    this.imageUrl = imageUrl;
-    this.label = label;
-  }
 }

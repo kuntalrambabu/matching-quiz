@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs/Observable';
+
 import { MatchModel } from '../../models/match-model';
 
 @Component({
@@ -8,12 +11,13 @@ import { MatchModel } from '../../models/match-model';
 })
 export class MatchGalleryComponent implements OnInit {
 
-  constructor() {
+  constructor(private http: HttpClient) {
+
+    this.http.get('../../../assets/animals/animals.json').toPromise().then(( response: any) => {
     this.models = new Array<MatchModel>();
-    this.models.push(new MatchModel( '../assets/animals/dog.jpg', 'dog' ));
-    this.models.push(new MatchModel( '../assets/animals/cat.jpg', 'dog' ));
-    this.models.push(new MatchModel( '../assets/animals/bird.jpg', 'dog' ));
-    this.models.push(new MatchModel( '../assets/animals/pig.jpg', 'dog' ));
+    this.models.push( ...response );
+    });
+
   }
 
   public models: Array<MatchModel>;

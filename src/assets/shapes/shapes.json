@@ -1,34 +1,34 @@
 [
   {
     "label": "circle",
-    "url": ""
+    "imageUrl": "../assets/shapes/circle.png"
   },
   {
     "label": "diamond",
-    "url": ""
+    "imageUrl": "../assets/shapes/diamond.png"
   },
   {
     "label": "heart",
-    "url": ""
+    "imageUrl": "../assets/shapes/heart.png"
   },
   {
     "label": "hexagon",
-    "url": ""
+    "imageUrl": "../assets/shapes/hexagon.png"
   },
   {
     "label": "lightning-bolt",
-    "url": ""
+    "imageUrl": "../assets/shapes/lightning-bolt.png"
   },
   {
     "label": "pentagon",
-    "url": ""
+    "imageUrl": "../assets/shapes/pentagon.png"
   },
   {
     "label": "rectangle",
-    "url": ""
+    "imageUrl": "../assets/shapes/rectangle.png"
   },
   {
     "label": "triangle",
-    "url": ""
+    "imageUrl": "../assets/shapes/triangle.png"
   }
 ]

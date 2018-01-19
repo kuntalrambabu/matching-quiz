@@ -1,38 +1,38 @@
 [
   {
     "label": "bird",
-    "url": ""
+    "imageUrl": "../assets/animals/bird.jpg"
   },
   {
     "label": "cat",
-    "url": ""
+    "imageUrl": "../assets/animals/cat.jpg"
   },
   {
     "label": "cow",
-    "url": ""
+    "imageUrl": "../assets/animals/cow.jpeg"
   },
   {
     "label": "dog",
-    "url": ""
+    "imageUrl": "../assets/animals/dog.jpg"
   },
   {
     "label": "goat",
-    "url": ""
+    "imageUrl": "../assets/animals/goat.jpg"
   },
   {
     "label": "horse",
-    "url": ""
+    "imageUrl": "../assets/animals/horse.jpg"
   },
   {
     "label": "pig",
-    "url": ""
+    "imageUrl": "../assets/animals/pig.jpg"
   },
   {
     "label": "rooster",
-    "url": ""
+    "imageUrl": "../assets/animals/rooster.jpg"
   },
   {
     "label": "sheep",
-    "url": ""
+    "imageUrl": "../assets/animals/sheep.jpg"
   }
 ]
