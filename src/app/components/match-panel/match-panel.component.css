@@ -1,0 +1,6 @@
+div {
+  background:gainsboro;
+  white-space: nowrap;
+  width:100%;
+  overflow-x: scroll;
+}

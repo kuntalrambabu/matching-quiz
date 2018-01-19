@@ -1,0 +1,18 @@
+[
+  {
+    "label": "circle",
+    "imageUrl": "../assets/shapes-small/circle.png"
+  },
+  {
+    "label": "pentagon",
+    "imageUrl": "../assets/shapes-small/hexagon.png"
+  },
+  {
+    "label": "rectangle",
+    "imageUrl": "../assets/shapes-small/rectangle.png"
+  },
+  {
+    "label": "triangle",
+    "imageUrl": "../assets/shapes-small/triangle.png"
+  }
+]
