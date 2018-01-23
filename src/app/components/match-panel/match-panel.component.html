@@ -1,3 +1,9 @@
-<div>
-  <h1>Match Panel</h1>
+<div class="panel-div-wrapper">
+  <div class="panel-div">
+    <ul *ngFor="let model of models$ | async">
+      <li>
+        <!--<app-match-tile [model]="model"></app-match-tile>-->
+      </li>
+    </ul>
+  </div>
 </div>

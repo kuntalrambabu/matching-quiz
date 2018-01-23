@@ -1,6 +1,15 @@
-div {
-  background:gainsboro;
+.panel-div {
   white-space: nowrap;
+  display:inline;
+}
+.panel-div-wrapper {
+  background:gainsboro;
   width:100%;
-  overflow-x: scroll;
+  overflow-x:auto;
+}
+ul {
+  display:inline-block;
+}
+li {
+  list-style-type: none;
 }
