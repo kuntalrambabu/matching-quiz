@@ -8,13 +8,15 @@ import { MatchTileComponent } from './components/match-tile/match-tile.component
 import { MatchPanelComponent } from './components/match-panel/match-panel.component';
 
 import { MatchService } from './services/match-service/match-service';
+import { MatchTargetComponent } from './components/match-target/match-target.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MatchGalleryComponent,
     MatchTileComponent,
-    MatchPanelComponent
+    MatchPanelComponent,
+    MatchTargetComponent
   ],
   imports: [
     BrowserModule,
