@@ -1,6 +1,6 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import { MatchService } from './match-service.service';
+import { MatchService } from './match-service';
 
 describe('MatchService', () => {
   beforeEach(() => {

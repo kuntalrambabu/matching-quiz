@@ -7,7 +7,7 @@ import { MatchGalleryComponent } from './components/match-gallery/match-gallery.
 import { MatchTileComponent } from './components/match-tile/match-tile.component';
 import { MatchPanelComponent } from './components/match-panel/match-panel.component';
 
-import { MatchService } from './services/match-service/match-service.service';
+import { MatchService } from './services/match-service/match-service';
 
 @NgModule({
   declarations: [
