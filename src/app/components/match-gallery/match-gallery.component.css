@@ -6,6 +6,7 @@
   background:gainsboro;
   width:100%;
   overflow-x:auto;
+  margin-top: 80px;
 }
 ul {
   display:inline;

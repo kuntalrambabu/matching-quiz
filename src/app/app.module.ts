@@ -9,6 +9,7 @@ import { MatchPanelComponent } from './components/match-panel/match-panel.compon
 
 import { MatchService } from './services/match-service/match-service';
 import { MatchTargetComponent } from './components/match-target/match-target.component';
+import { StatusBarComponent } from './components/status-bar/status-bar.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { MatchTargetComponent } from './components/match-target/match-target.com
     MatchGalleryComponent,
     MatchTileComponent,
     MatchPanelComponent,
-    MatchTargetComponent
+    MatchTargetComponent,
+    StatusBarComponent
   ],
   imports: [
     BrowserModule,
