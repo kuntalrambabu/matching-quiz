@@ -1,7 +1,7 @@
 <div class="panel-div-wrapper">
   <div class="panel-div">
-    <ul *ngFor="let model of models$ | async">
-      <li>
+    <ul>
+      <li *ngFor="let model of models$ | async">
         <app-match-target [model]="model"></app-match-target>
       </li>
     </ul>

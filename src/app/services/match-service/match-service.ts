@@ -16,8 +16,8 @@ export class MatchService {
 
     this.models = new Array<MatchModel>();
     this.modelsSubject = new BehaviorSubject(this.models);
-    // const url = '../../../assets/animals/animals.json';
-    const url = '../../../assets/shapes/shapes.json';
+    const url = '../../../assets/animals/animals.json';
+    // const url = '../../../assets/shapes/shapes.json';
     // const url = '../../../assets/shapes-small/shapes-small.json';
     this.http.get(url).toPromise().then(( response: any) => {
       this.models.push( ...response );
