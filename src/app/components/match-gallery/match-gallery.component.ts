@@ -14,10 +14,10 @@ export class MatchGalleryComponent implements OnInit {
   public models$: Observable<Array<MatchModel>>;
 
   constructor( private matchService: MatchService ) {
-    this.models$ = this.matchService.getModels();
   }
 
   ngOnInit() {
+    this.models$ = this.matchService.getModels();
   }
 
 }
