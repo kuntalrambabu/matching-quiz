@@ -1,0 +1,16 @@
+div {
+  border-radius: 10%;
+  overflow:hidden;
+  border: 3px solid black;
+  margin:0px;
+  height:180px;
+  width:210px;
+}
+h1 {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  background-color:aliceblue;
+  height:100%;
+  margin:0px;
+}
