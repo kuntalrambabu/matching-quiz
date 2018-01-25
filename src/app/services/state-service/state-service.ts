@@ -7,7 +7,7 @@ import { of } from 'rxjs/observable/of';
 import { MatchModel } from '../../models/match-model';
 
 @Injectable()
-export class MatchService {
+export class StateService {
 
   private modelsSubject: BehaviorSubject<Array<MatchModel>>;
   private models: Array<MatchModel>;

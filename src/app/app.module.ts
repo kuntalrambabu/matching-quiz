@@ -7,7 +7,7 @@ import { MatchGalleryComponent } from './components/match-gallery/match-gallery.
 import { MatchTileComponent } from './components/match-tile/match-tile.component';
 import { MatchPanelComponent } from './components/match-panel/match-panel.component';
 
-import { MatchService } from './services/match-service/match-service';
+import { StateService } from './services/state-service/state-service';
 import { MatchTargetComponent } from './components/match-target/match-target.component';
 import { StatusBarComponent } from './components/status-bar/status-bar.component';
 
@@ -24,7 +24,7 @@ import { StatusBarComponent } from './components/status-bar/status-bar.component
     BrowserModule,
     HttpClientModule
   ],
-  providers: [ MatchService ],
+  providers: [ StateService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

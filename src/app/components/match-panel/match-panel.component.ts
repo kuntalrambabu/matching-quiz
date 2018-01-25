@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { map } from 'rxjs/operators';
 
-import { MatchService } from '../../services/match-service/match-service';
+import { StateService } from '../../services/state-service/state-service';
 import { MatchModel } from '../../models/match-model';
 
 @Component({
@@ -14,11 +14,11 @@ export class MatchPanelComponent implements OnInit {
 
   public models$: Observable<Array<MatchModel>>;
 
-  constructor(private matchService: MatchService ) {
+  constructor(private stateService: StateService ) {
   }
 
   ngOnInit() {
-    this.models$ = this.matchService.getModels().pipe(map( (models: Array<MatchModel>) => this.shuffle(models)));
+    this.models$ = this.stateService.getModels().pipe(map( (models: Array<MatchModel>) => this.shuffle(models)));
   }
 
   shuffle( models: Array<MatchModel>): Array<MatchModel> {
