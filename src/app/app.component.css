@@ -1,0 +1,4 @@
+app-match-panel, app-match-gallery {
+  display:flex;
+  justify-content: center;
+}
