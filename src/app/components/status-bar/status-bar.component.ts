@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/operator/map';
+import { map } from 'rxjs/operators';
 
+import { MatchModel } from '../../models/match-model';
 import { MatchService } from '../../services/match-service/match-service';
 
 @Component({
@@ -19,6 +20,6 @@ export class StatusBarComponent implements OnInit {
 
   ngOnInit() {
     this.matchCount$ = this.matchService.getCurrentMatches();
-    this.matchTotal$ = this.matchService.getModels().map( models => models.length );
+    this.matchTotal$ = this.matchService.getModels().pipe( map( (models: Array<MatchModel>) => models.length ));
   }
 }
