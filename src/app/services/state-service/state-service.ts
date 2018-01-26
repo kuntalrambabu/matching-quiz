@@ -5,24 +5,27 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { of } from 'rxjs/observable/of';
 
 import { MatchModel } from '../../models/match-model';
+import { MatchSet } from '../../models/match-set';
 
 @Injectable()
 export class StateService {
 
   private modelsSubject: BehaviorSubject<Array<MatchModel>>;
-  private models: Array<MatchModel>;
+  private setsSubject: BehaviorSubject<Array<MatchSet>>;
 
   constructor(private http: HttpClient) {
 
-    this.models = new Array<MatchModel>();
-    this.modelsSubject = new BehaviorSubject(this.models);
+    this.modelsSubject = new BehaviorSubject(new Array<MatchModel>());
     const url = '../../../assets/animals/animals.json';
     // const url = '../../../assets/shapes/shapes.json';
     // const url = '../../../assets/shapes-small/shapes-small.json';
     this.http.get(url).toPromise().then(( response: any) => {
-      this.models.push( ...response );
-      this.modelsSubject.next(this.models);
+      this.modelsSubject.next(new Array<MatchModel>(...response));
     });
+  }
+
+  getMatchSets(): Observable<Array<MatchSet>> {
+    return this.setsSubject.asObservable();
   }
 
   getModels(): Observable<Array<MatchModel>> {
@@ -30,6 +33,6 @@ export class StateService {
   }
 
   getCurrentMatches(): Observable<number> {
-    return of(4);
+    return of(0); // TODO
   }
 }
