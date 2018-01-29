@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Animals",
+    "url": "../../../assets/animals/animals.json"
+  },
+  {
+    "title": "Shapes",
+    "url": "../../../assets/shapes/shapes.json"
+  },
+  {
+    "title": "Shapes (Small)",
+    "url": "../../../assets/shapes-small/shapes-small.json"
+  }
+]

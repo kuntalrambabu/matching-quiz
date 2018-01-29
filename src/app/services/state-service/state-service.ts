@@ -10,12 +10,17 @@ import { MatchSet } from '../../models/match-set';
 @Injectable()
 export class StateService {
 
-  private modelsSubject: BehaviorSubject<Array<MatchModel>>;
-  private setsSubject: BehaviorSubject<Array<MatchSet>>;
+  private modelsSubject = new BehaviorSubject( new Array<MatchModel>() );
+  private setsSubject = new BehaviorSubject( new Array<MatchSet>() );
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient) {}
 
-    this.modelsSubject = new BehaviorSubject(new Array<MatchModel>());
+  initialize() {
+    const indexUrl = '../../../assets/index.json';
+    this.http.get(indexUrl).toPromise().then(( response: any ) => {
+      this.setsSubject.next(new Array<MatchSet>(...response));
+    });
+
     const url = '../../../assets/animals/animals.json';
     // const url = '../../../assets/shapes/shapes.json';
     // const url = '../../../assets/shapes-small/shapes-small.json';
