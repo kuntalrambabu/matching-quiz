@@ -18,6 +18,8 @@ export class StatusBarComponent implements OnInit {
   matchCount$: Observable<number>;
   matchTotal$: Observable<number>;
 
+  selectedMatchSet: MatchSet;
+
   constructor( private stateService: StateService ) { }
 
   ngOnInit() {
@@ -26,7 +28,8 @@ export class StatusBarComponent implements OnInit {
     this.matchTotal$ = this.stateService.getModels().pipe( map( (models: Array<MatchModel>) => models.length ));
   }
 
-  onChange(value: any) : void {
+  onChange() : void {
     debugger;
+   // console.log(value);
   }
 }

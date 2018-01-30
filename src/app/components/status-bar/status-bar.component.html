@@ -1,8 +1,9 @@
 <div>
   <h1>Matching Quiz</h1>
   <p>Current matches: {{ matchCount$ | async }} of {{ matchTotal$ | async }} </p>
-  <select (change)="onChange($event.target.value)">
-    <option *ngFor="let matchSet of matchSets$ | async" value="{{matchSet.url}}" label="{{ matchSet.title }}">
+  <select (change)="onChange()" [(ngModel)]="selectedMatchSet">
+    <option *ngFor="let matchSet of matchSets$ | async" [ngValue]="matchSet">
+      {{matchSet.title}}
     </option>
   </select>
   <input type="button" value="Reset" />
