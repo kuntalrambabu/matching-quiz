@@ -1,13 +1,17 @@
-<div>
-  <h1>Matching Quiz</h1>
-  <span *ngIf="(matchSets$ | async) !== null; else selectMatchSetMessage">
-  <p>Current matches of <b>{{ (currentMatchSet$ | async).title }}:</b> {{ matchCount$ | async }} of {{ matchTotal$ | async }} </p>
-  </span>
-  <ng-template #selectMatchSetMessage>Select a match set</ng-template>
-  <select (change)="onChange()" [(ngModel)]="selectedMatchSet">
-    <option *ngFor="let matchSet of matchSets$ | async" [ngValue]="matchSet">
-      {{matchSet.title}}
-    </option>
-  </select>
-  <input type="button" value="Reset" />
+<div id="outerDiv">
+  <div id="innerDiv">
+    <h1>Matching Quiz</h1>
+    <span *ngIf="!(isLoaded$ | async)">
+      Select a match set:
+    </span>
+    <select (change)="onChange()" [(ngModel)]="selectedMatchSet">
+      <option *ngFor="let matchSet of matchSets$ | async" [ngValue]="matchSet">
+        {{matchSet.title}}
+      </option>
+    </select>
+    <span *ngIf="isLoaded$ | async">
+      {{ matchCount$ | async }} of {{ matchTotal$ | async }}
+    </span>
+    <input *ngIf="isLoaded$ | async" type="button" value="Reset" />
+  </div>
 </div>
