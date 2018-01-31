@@ -18,7 +18,11 @@ export class StatusBarComponent implements OnInit {
   matchCount$: Observable<number>;
   matchTotal$: Observable<number>;
 
+  // The match set selected in the UI by the user
   selectedMatchSet: MatchSet;
+
+  // The match set currently loaded and in play.
+  currentMatchSet$: Observable<MatchSet>;
 
   constructor( private stateService: StateService ) { }
 
@@ -26,10 +30,10 @@ export class StatusBarComponent implements OnInit {
     this.matchSets$ = this.stateService.getMatchSets();
     this.matchCount$ = this.stateService.getCurrentMatches();
     this.matchTotal$ = this.stateService.getModels().pipe( map( (models: Array<MatchModel>) => models.length ));
+    this.currentMatchSet$ = this.stateService.getCurrentMatchSet();
   }
 
   onChange() : void {
-    debugger;
-   // console.log(value);
+    this.stateService.selectMatchSet( this.selectedMatchSet );
   }
 }

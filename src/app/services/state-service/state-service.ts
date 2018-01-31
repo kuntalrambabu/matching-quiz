@@ -12,6 +12,7 @@ export class StateService {
 
   private modelsSubject = new BehaviorSubject( new Array<MatchModel>() );
   private setsSubject = new BehaviorSubject( new Array<MatchSet>() );
+  private currentSetSubject = new BehaviorSubject( null );
 
   constructor(private http: HttpClient) {}
 
@@ -20,13 +21,16 @@ export class StateService {
     this.http.get(indexUrl).toPromise().then(( response: any ) => {
       this.setsSubject.next(new Array<MatchSet>(...response));
     });
+  }
 
-    const url = '../../../assets/animals/animals.json';
-    // const url = '../../../assets/shapes/shapes.json';
-    // const url = '../../../assets/shapes-small/shapes-small.json';
-    this.http.get(url).toPromise().then(( response: any) => {
+  selectMatchSet( matchSet: MatchSet ) {
+    this.currentSetSubject.next(matchSet);
+    this.http.get(matchSet.url).toPromise().then(( response: any) => {
       this.modelsSubject.next(new Array<MatchModel>(...response));
     });
+  }
+  getCurrentMatchSet() : Observable<MatchSet> {
+    return this.currentSetSubject.asObservable();
   }
 
   getMatchSets(): Observable<Array<MatchSet>> {

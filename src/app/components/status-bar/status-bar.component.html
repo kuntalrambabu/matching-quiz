@@ -1,6 +1,9 @@
 <div>
   <h1>Matching Quiz</h1>
-  <p>Current matches: {{ matchCount$ | async }} of {{ matchTotal$ | async }} </p>
+  <span *ngIf="(matchSets$ | async) !== null; else selectMatchSetMessage">
+  <p>Current matches of <b>{{ (currentMatchSet$ | async).title }}:</b> {{ matchCount$ | async }} of {{ matchTotal$ | async }} </p>
+  </span>
+  <ng-template #selectMatchSetMessage>Select a match set</ng-template>
   <select (change)="onChange()" [(ngModel)]="selectedMatchSet">
     <option *ngFor="let matchSet of matchSets$ | async" [ngValue]="matchSet">
       {{matchSet.title}}
