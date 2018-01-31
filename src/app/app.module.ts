@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { DragulaModule } from 'ng2-dragula';
 
 import { AppComponent } from './app.component';
 import { MatchGalleryComponent } from './components/match-gallery/match-gallery.component';
@@ -24,7 +25,8 @@ import { StatusBarComponent } from './components/status-bar/status-bar.component
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    DragulaModule
   ],
   providers: [ StateService ],
   bootstrap: [AppComponent]
