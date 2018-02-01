@@ -5,6 +5,8 @@ div {
   margin:0px;
   height:180px;
   width:226px;
+  display: inline-block;
+  vertical-align: top;
 }
 h1 {
   display:flex;

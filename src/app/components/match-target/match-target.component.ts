@@ -14,7 +14,6 @@ export class MatchTargetComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
 }

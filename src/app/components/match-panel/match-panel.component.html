@@ -1,7 +1,7 @@
 <div class="panel-div-wrapper">
   <div class="panel-div">
     <ul>
-      <li *ngFor="let model of models$ | async">
+      <li *ngFor="let model of models$ | async" [dragula]="model.label + '-bag'">
         <app-match-target [model]="model"></app-match-target>
       </li>
     </ul>
