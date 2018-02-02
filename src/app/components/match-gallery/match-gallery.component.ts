@@ -13,6 +13,11 @@ export class MatchGalleryComponent implements OnInit {
 
   public models$: Observable<Array<MatchModel>>;
 
+  public dragulaOptions = {
+      invalid: (el, source) => el.classList.contains('match-target')
+  };
+
+
   constructor( private stateService: StateService ) {
   }
 

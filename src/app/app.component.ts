@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { DragulaService} from 'ng2-dragula';
 
 import { StateService } from './services/state-service/state-service';
 
@@ -11,10 +10,7 @@ import { StateService } from './services/state-service/state-service';
 export class AppComponent implements OnInit {
   title = 'Matching Quiz';
 
-  constructor( private stateService: StateService, private dragulaService: DragulaService ) {
-    this.dragulaService.drag.subscribe( (value:any) => {
-      console.log(value);
-    });
+  constructor( private stateService: StateService ) {
   }
 
   ngOnInit() {

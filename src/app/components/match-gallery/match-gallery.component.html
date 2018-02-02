@@ -1,7 +1,7 @@
 <div class="gallery-div-wrapper">
   <div class="gallery-div">
     <ul>
-      <li *ngFor="let model of models$ | async" [dragula]="model.label + '-bag'">
+      <li *ngFor="let model of models$ | async" [dragula]="model.label + '-bag'" [dragulaOptions]="dragulaOptions">
         <app-match-tile [model]="model"></app-match-tile>
       </li>
     </ul>
