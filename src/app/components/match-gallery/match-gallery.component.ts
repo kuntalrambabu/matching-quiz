@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 
+import { DragulaService } from 'ng2-dragula';
+
 import { StateService } from '../../services/state-service/state-service';
 import { MatchModel } from '../../models/match-model';
 
@@ -18,11 +20,15 @@ export class MatchGalleryComponent implements OnInit {
   };
 
 
-  constructor( private stateService: StateService ) {
+  constructor( private stateService: StateService, private dragulaService: DragulaService ) {
   }
 
   ngOnInit() {
     this.models$ = this.stateService.getModels();
+    this.dragulaService.drop.subscribe( (value) => {
+      // console.log(`drop: ${value}`);
+      this.stateService.completeMatch(value[0]);
+    })
   }
 
 }

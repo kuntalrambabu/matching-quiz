@@ -5,12 +5,15 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { of } from 'rxjs/observable/of';
 
 import { MatchModel } from '../../models/match-model';
+import { MatchTile } from '../../models/match-tile';
 import { MatchSet } from '../../models/match-set';
 
 @Injectable()
 export class StateService {
 
-  private modelsSubject = new BehaviorSubject( new Array<MatchModel>() );
+  private models = new Array<MatchModel>();
+
+  private modelsSubject = new BehaviorSubject( this.models );
   private setsSubject = new BehaviorSubject( new Array<MatchSet>() );
   private currentSetSubject = new BehaviorSubject( null );
 
@@ -26,7 +29,12 @@ export class StateService {
   selectMatchSet( matchSet: MatchSet ) {
     this.currentSetSubject.next(matchSet);
     this.http.get(matchSet.url).toPromise().then(( response: any) => {
-      this.modelsSubject.next(new Array<MatchModel>(...response));
+      const tiles = new Array<MatchTile>(...response);
+      this.models = new Array<MatchModel>();
+      tiles.forEach( tile => {
+        this.models.push( new MatchModel(tile));
+      });
+      this.modelsSubject.next(this.models);
     });
   }
   getCurrentMatchSet() : Observable<MatchSet> {
@@ -43,5 +51,9 @@ export class StateService {
 
   getCurrentMatches(): Observable<number> {
     return of(0); // TODO
+  }
+
+  completeMatch( container: string) {
+    // let matchedModel = this.models.find( model => model.label === 'circle');
   }
 }
