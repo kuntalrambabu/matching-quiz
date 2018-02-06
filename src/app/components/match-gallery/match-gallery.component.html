@@ -2,7 +2,7 @@
   <div class="gallery-div">
     <ul>
       <li *ngFor="let model of models$ | async" [dragula]="model.containerName" [dragulaOptions]="dragulaOptions">
-        <app-match-tile [model]="model"></app-match-tile>
+        <app-match-tile [model]="model" *ngIf="!model.isMatched"></app-match-tile>
       </li>
     </ul>
   </div>
