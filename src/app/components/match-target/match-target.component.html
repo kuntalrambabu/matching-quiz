@@ -1,3 +1,4 @@
-<div>
+<div [class.emptyMatchHeight]="!model.isMatched">
   <h1> {{ model.tile.label }}</h1>
+  <img *ngIf="model.isMatched" [src]="model.tile.imageUrl" />
 </div>
