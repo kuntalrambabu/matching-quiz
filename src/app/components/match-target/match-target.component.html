@@ -1,4 +1,4 @@
 <div [class.emptyMatchHeight]="!model.isMatched">
-  <h1> {{ model.tile.label }}</h1>
+  <h1 [dragula]="model.containerName"> {{ model.tile.label }}</h1>
   <img *ngIf="model.isMatched" [src]="model.tile.imageUrl" />
 </div>
