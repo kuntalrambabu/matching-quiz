@@ -1,0 +1,50 @@
+[
+  {
+    "label": "Australian Sheperd",
+    "imageUrl": "../assets/dogs/australian-sheperd.jpg"
+  },
+  {
+    "label": "Basset Hound",
+    "imageUrl": "../assets/dogs/basset-hound.jpg"
+  },
+  {
+    "label": "Bull Mastiff",
+    "imageUrl": "../assets/dogs/bull-mastiff.jpg"
+  },
+  {
+    "label": "Chihuahua",
+    "imageUrl": "../assets/dogs/chihuahua.jpg"
+  },
+  {
+    "label": "Chocolate Labrador Retriever",
+    "imageUrl": "../assets/dogs/chocolate-labrador-retriever.jpg"
+  },
+  {
+    "label": "Dachshund",
+    "imageUrl": "../assets/dogs/dachshund.jpg"
+  },
+  {
+    "label": "Doberman Pinscher",
+    "imageUrl": "../assets/dogs/doberman-pinscher.jpg"
+  },
+  {
+    "label": "Golden Retriever",
+    "imageUrl": "../assets/dogs/golden-retriever.jpg"
+  },
+  {
+    "label": "Irish Setter",
+    "imageUrl": "../assets/dogs/irish-setter.jpg"
+  },
+  {
+    "label": "Siberian Husky",
+    "imageUrl": "../assets/dogs/siberian-husky.jpg"
+  },
+  {
+    "label": "St. Bernard",
+    "imageUrl": "../assets/dogs/st-bernard.jpg"
+  },
+  {
+    "label": "Weimaraner",
+    "imageUrl": "../assets/dogs/weimaraner.jpg"
+  }
+]

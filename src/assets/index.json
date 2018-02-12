@@ -4,6 +4,10 @@
     "url": "../../../assets/animals/animals.json"
   },
   {
+    "title": "Dogs",
+    "url": "../../../assets/dogs/dogs.json"
+  },
+  {
     "title": "Shapes",
     "url": "../../../assets/shapes/shapes.json"
   },
