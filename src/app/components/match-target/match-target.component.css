@@ -17,6 +17,9 @@ img
   display:block;
 }
 h1 {
+  white-space: normal;
+  text-align: center;
+  font-size: 24px;
   display:flex;
   align-items: center;
   justify-content: center;
