@@ -12,6 +12,6 @@
     <span *ngIf="isLoaded$ | async">
       {{ matchCount$ | async }} of {{ matchTotal$ | async }}
     </span>
-    <input *ngIf="isLoaded$ | async" type="button" value="Reset" />
+    <button mat-raised-button color="primary" *ngIf="isLoaded$ | async" (click)="onResetClicked()">Reset</button>
   </div>
 </div>

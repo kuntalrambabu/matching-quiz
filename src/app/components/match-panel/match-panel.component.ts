@@ -18,8 +18,8 @@ export class MatchPanelComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.models$ = this.stateService.getModels().pipe(map( (models: Array<MatchModel>) => models));
-    // this.models$ = this.stateService.getModels().pipe(map( (models: Array<MatchModel>) => this.shuffle(models)));
+    // this.models$ = this.stateService.getModels().pipe(map( (models: Array<MatchModel>) => models));
+    this.models$ = this.stateService.getModels().pipe(map( (models: Array<MatchModel>) => this.shuffle(models)));
   }
 
   shuffle( models: Array<MatchModel>): Array<MatchModel> {

@@ -44,4 +44,8 @@ export class StatusBarComponent implements OnInit {
   onChange() : void {
     this.stateService.selectMatchSet( this.selectedMatchSet );
   }
+
+  onResetClicked() : void {
+    this.stateService.selectMatchSet( this.selectedMatchSet );
+  }
 }
