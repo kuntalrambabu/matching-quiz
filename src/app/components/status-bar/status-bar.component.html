@@ -4,11 +4,13 @@
     <span *ngIf="!(isLoaded$ | async)">
       Select a match set:
     </span>
-    <select (change)="onChange()" [(ngModel)]="selectedMatchSet">
-      <option *ngFor="let matchSet of matchSets$ | async" [ngValue]="matchSet">
-        {{matchSet.title}}
-      </option>
-    </select>
+    <mat-form-field>
+      <mat-select (change)="onChange()" [(ngModel)]="selectedMatchSet">
+        <mat-option *ngFor="let matchSet of matchSets$ | async" [value]="matchSet">
+          {{matchSet.title}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
     <span *ngIf="isLoaded$ | async">
       {{ matchCount$ | async }} of {{ matchTotal$ | async }}
     </span>
