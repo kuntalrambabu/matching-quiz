@@ -19,6 +19,7 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
+        "matching-quiz-app-theme.scss",
         "styles.css",
         "../node_modules/dragula/dist/dragula.min.css"
       ],
